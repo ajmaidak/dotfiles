@@ -1,3 +1,28 @@
+#
+# ~/.bashrc
+#
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=100000
+HISTFILESIZE=2000000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    source $HOME/.bash-git-prompt/gitprompt.sh
+fi
+
+# Shopify's dev command...
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
@@ -7,7 +32,6 @@
 # cloudplatform: add Shopify clusters to your local kubernetes config
 export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/alex_maidak/.kube/config:/Users/alex_maidak/.kube/config.shopify.cloudplatform
 
-# 
 export EDITOR=nvim
 alias vi=nvim
 alias vim=nvim
