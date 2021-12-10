@@ -45,6 +45,10 @@ fi
 export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/alex_maidak/.kube/config:/Users/alex_maidak/.kube/config.shopify.cloudplatform
 
 export EDITOR=nvim
+
+# vi keybindings FTW!
+set -o vi
+
 alias vi=nvim
 alias vim=nvim
 alias ll='ls -l'
