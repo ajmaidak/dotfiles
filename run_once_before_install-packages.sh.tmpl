@@ -21,3 +21,8 @@ EOF
 if [ ! -d ~/.bash-git-prompt ]; then
   git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 fi
+
+if [ ! -d  ~/src/github.com/burke/minidev ]; then
+  mkdir -p  ~/src/github.com/burke/
+  git clone https://github.com/burke/minidev ~/src/github.com/burke/
+fi

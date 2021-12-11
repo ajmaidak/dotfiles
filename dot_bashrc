@@ -34,8 +34,13 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     source $HOME/.bash-git-prompt/gitprompt.sh
 fi
 
-# Shopify's dev command...
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+# Shopify's dev command for work
+if [ -f /opt/dev/dev.sh ]; then
+  source /opt/dev/dev.sh
+elif [ -f ~/src/github.com/burke/minidev/dev.sh ]; then
+  # minidev for home use...
+  source ~/src/github.com/burke/minidev/dev.sh
+fi
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
 
