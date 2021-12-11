@@ -2,8 +2,6 @@
 # Hello there!  This is Alex Maidak's .bash_profile!
 #
 
-if [[ -f /opt/dev/dev.sh ]]; then source /opt/dev/dev.sh; fi
-
 # include .bashrc if it exists
 if [ -f "$HOME/.bashrc" ]; then
   . "$HOME/.bashrc"
