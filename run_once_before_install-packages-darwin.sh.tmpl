@@ -1,0 +1,12 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+# use a Brewfile see: https://github.com/Homebrew/homebrew-bundle#usage
+brew bundle --no-lock --file=/dev/stdin <<EOF
+brew "bash"
+brew "git"
+brew "neovim"
+brew "tmux"
+EOF
+
+{{ end -}}
