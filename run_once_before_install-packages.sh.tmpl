@@ -1,7 +1,8 @@
 {{- if (eq .chezmoi.os "linux") -}}
 #!/bin/bash
 
-sudo apt install -y git tmux neovim
+# ruby needed for minidev
+sudo apt install -y git tmux neovim ruby
 
 {{ end -}}
 
