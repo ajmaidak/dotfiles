@@ -27,3 +27,8 @@ if [ ! -d  ~/src/github.com/burke/minidev ]; then
   mkdir -p  ~/src/github.com/burke/
   git clone https://github.com/burke/minidev ~/src/github.com/burke/minidev
 fi
+
+if [ ! -e "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/autoload/plug.vim" ]; then
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+fi
