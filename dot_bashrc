@@ -17,8 +17,12 @@ HISTFILESIZE=2000000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Little method save the command return code
+PS_RC='$([ $? -eq 0 ] && echo -e "✔" || echo -e "✘")'
+
 # Initial PS1, probably will be mutated by git prompt...
-PS1='\u@\h:\w\$ '
+PS1="${PS_RC} \u@\h:\w\n\$ "
+
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -31,6 +35,8 @@ esac
 
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
+    GIT_PROMPT_THEME=Solarized
+    GIT_PROMPT_END="\n$ "
     source $HOME/.bash-git-prompt/gitprompt.sh
 fi
 
