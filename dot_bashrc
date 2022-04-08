@@ -61,6 +61,12 @@ export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/alex_maidak/.kube/config:/Us
 
 export EDITOR=nvim
 
+# nvm for Conquer of Completion, not sure if this will fight with 
+# Shopify Stuff or not...
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # vi keybindings FTW!
 set -o vi
 

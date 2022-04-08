@@ -4,6 +4,12 @@
 # ruby needed for minidev
 sudo apt install -y git tmux neovim ruby
 
+# nvm manages nodejs which is used by neoclide/coc (Conquer of Completion)
+# plugin for vim
+if [ ! -d .nvm ]; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+fi
+
 {{ end -}}
 
 {{- if (eq .chezmoi.os "darwin") -}}
