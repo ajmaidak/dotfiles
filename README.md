@@ -4,7 +4,7 @@ Install chezmoi: `sh -c "$(curl -fsLS chezmoi.io/get)"`
 
 Setup Data Config: `.config/chezmoi/chezmoi.toml`, with
 
-``
+```
 [data]
     email = YOUR EMAIL
 ```
