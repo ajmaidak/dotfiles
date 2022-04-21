@@ -8,6 +8,7 @@ sudo apt install -y git tmux neovim ruby
 # plugin for vim
 if [ ! -d .nvm ]; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  nvm install node
 fi
 
 {{ end -}}
