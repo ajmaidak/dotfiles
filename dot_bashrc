@@ -68,7 +68,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Python on MacOS
-if [ -x "/opt/homebrew/opt/python/libexec/bin/python"]; then
+if [ -x "/opt/homebrew/opt/python/libexec/bin/python" ]; then
   export PATH="${PATH}:/opt/homebrew/opt/python/libexec/bin/"
 fi
 
