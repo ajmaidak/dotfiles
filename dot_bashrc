@@ -72,6 +72,11 @@ if [ -x "/opt/homebrew/opt/python/libexec/bin/python" ]; then
   export PATH="${PATH}:/opt/homebrew/opt/python/libexec/bin/"
 fi
 
+# Go if its manually installed
+if [ -x "/usr/local/go/bin/go" ]; then
+  export PATH="${PATH}:/usr/local/go/bin"
+fi
+
 # vi keybindings FTW!
 set -o vi
 
@@ -81,3 +86,4 @@ alias ll='ls -l'
 alias rm='rm -v -i'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
