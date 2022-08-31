@@ -57,7 +57,7 @@ if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; the
 fi
 
 # cloudplatform: add Shopify clusters to your local kubernetes config
-export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/alex_maidak/.kube/config:/Users/alex_maidak/.kube/config.shopify.cloudplatform
+export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}${HOME}/.kube/config:${HOME}/.kube/config.shopify.cloudplatform
 
 export EDITOR=nvim
 
