@@ -38,7 +38,7 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
     GIT_PROMPT_THEME=Solarized
     GIT_PROMPT_END="\n$ "
-    source $HOME/.bash-git-prompt/gitprompt.sh
+    source "${HOME}/.bash-git-prompt/gitprompt.sh"
 fi
 
 # Shopify's dev command for work
@@ -62,7 +62,7 @@ if [ -x "${HOME}/bin/go/bin/go" ]; then
 fi
 
 # cloudplatform: add Shopify clusters to your local kubernetes config
-export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}${HOME}/.kube/config:${HOME}/.kube/config.shopify.cloudplatform
+export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/alex_maidak/.kube/config:/Users/alex_maidak/.kube/config.shopify.cloudplatform
 
 export EDITOR=nvim
 
