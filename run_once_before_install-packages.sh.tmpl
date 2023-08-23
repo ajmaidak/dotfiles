@@ -2,12 +2,12 @@
 #!/bin/bash
 
 # ruby needed for minidev
-sudo apt install -y git tmux neovim ruby
+sudo apt install -y git tmux neovim ruby tig
 
 # nvm manages nodejs which is used by neoclide/coc (Conquer of Completion)
 # plugin for vim
 if [ ! -d .nvm ]; then
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
   nvm install node
 fi
 
@@ -22,6 +22,7 @@ brew "bash"
 brew "git"
 brew "neovim"
 brew "tmux"
+brew "tig"
 EOF
 
 {{ end -}}
