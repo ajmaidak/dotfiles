@@ -92,3 +92,6 @@ alias rm='rm -v -i'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+if [ -x /Users/alex_maidak/src/github.com/Shopify/db-core-mysql/scripts/knife-alias.sh ]; then
+  source /Users/alex_maidak/src/github.com/Shopify/db-core-mysql/scripts/knife-alias.sh
+fi
