@@ -50,6 +50,7 @@ elif [ -f ~/src/github.com/burke/minidev/dev.sh ]; then
 fi
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
+[[ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /usr/local/opt/chruby/share/chruby/chruby.sh; chruby "$@"; } }
 
 [[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 
@@ -60,9 +61,6 @@ fi
 if [ -x "${HOME}/bin/go/bin/go" ]; then
   export PATH="${HOME}/bin/go/bin:${PATH}"
 fi
-
-# cloudplatform: add Shopify clusters to your local kubernetes config
-export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/alex_maidak/.kube/config:/Users/alex_maidak/.kube/config.shopify.cloudplatform
 
 export EDITOR=nvim
 
@@ -95,3 +93,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 if [ -x /Users/alex_maidak/src/github.com/Shopify/db-core-mysql/scripts/knife-alias.sh ]; then
   source /Users/alex_maidak/src/github.com/Shopify/db-core-mysql/scripts/knife-alias.sh
 fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
