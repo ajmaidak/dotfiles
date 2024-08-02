@@ -49,8 +49,7 @@ elif [ -f ~/src/github.com/burke/minidev/dev.sh ]; then
   source ~/src/github.com/burke/minidev/dev.sh
 fi
 
-[[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
-[[ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /usr/local/opt/chruby/share/chruby/chruby.sh; chruby "$@"; } }
+[[ -f /opt/homebrew/opt/chruby/share/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/homebrew/opt/chruby/share/chruby/chruby.sh; chruby "$@"; } }
 
 [[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 
@@ -58,8 +57,8 @@ if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; the
   export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
 
-if [ -x "${HOME}/bin/go/bin/go" ]; then
-  export PATH="${HOME}/bin/go/bin:${PATH}"
+if [ -d "${HOME}/go/bin" ]; then
+  export PATH="${HOME}/go/bin:${PATH}"
 fi
 
 export EDITOR=nvim
