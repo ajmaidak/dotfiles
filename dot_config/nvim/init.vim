@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 Plug 'morhetz/gruvbox'
+Plug 'rebelot/kanagawa.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
@@ -14,9 +15,7 @@ call plug#end()
 
 " Colors & theming
 set termguicolors
-colorscheme gruvbox
-set background=light   " Setting light mode
-let g:gruvbox_contrast_light = 'soft'
+colorscheme kanagawa
 
 " Search
 set hlsearch " highlight all search results
