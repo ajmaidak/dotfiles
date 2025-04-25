@@ -6,7 +6,9 @@ Setup Data Config: `.config/chezmoi/chezmoi.toml`, with
 
 ```
 [data]
-    email = YOUR EMAIL
+    email = "YOUR EMAIL"
+    signingkey = "GPG signing key"
+
 ```
 
 Apply Configs: `chezmoi init --apply https://github.com/ajmaidak/dotfiles.git`

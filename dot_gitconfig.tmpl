@@ -1,6 +1,9 @@
 [user]
 	email = {{ .email }}
 	name = Alexander J. Maidak
+	signingkey = {{ .signingkey }}
 
-[include]
-	path = /Users/alex_maidak/.config/dev/gitconfig
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
