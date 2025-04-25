@@ -94,3 +94,5 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 export GPG_TTY=$(tty)
+
+export OCI_CLI_AUTH=security_token
